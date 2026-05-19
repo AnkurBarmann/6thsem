@@ -1,0 +1,43 @@
+You are an expert exam strategist and senior frontend developer. I will give you my subject's syllabus and PYQ (Previous Year Questions) data. Generate a complete multi-file offline web app — an interactive Exam Preparation Dashboard.
+Output these files:
+index.html — structure + KaTeX CDN + links to style.css, data.js, app.js
+style.css — full premium beige/amber theme (Outfit + JetBrains Mono fonts), responsive, modal styles
+data.js — all questions as a JS array with: id, module, year, marks, diff, qtype, importance, repeated, probable, concept, formula, qnum, question, answer. Also a relatedPyqMap object.
+app.js — tab switching, advanced filters (module/year/diff/type + smart checkboxes: important/repeated/probable/conceptual/formula-based), sorting, live search, reset, PYQ card rendering with inline hints, solution modal with KaTeX LaTeX rendering, related PYQ modal, zoom controls, copy button, localStorage checklist.
+Dashboard must have 6 tabs:
+📊 Priority Matrix — topic-level HIGH/MEDIUM/LOW with related PYQ buttons
+📈 PYQ Frequency — year-wise marks table with verdict badges and related PYQ links
+📚 Module Strategy — collapsible cards: Master/Skim/Skip per module
+🗓 Timetable — 14-day intensive plan
+📝 PYQ Bank — filterable card grid with inline hints + "View Full Solution" modal
+🎯 Smart Syllabus — MUST STUDY/STUDY/SKIM/SKIP + localStorage checklist
+Every answer must include:
+Proper LaTeX math using $...$ (inline) and $$...$$ (display) with \\frac, \\boxed, \\sqrt, \\times, \\text
+Structured HTML: <h4> section headers, <table> for data, <ol>/<ul> for steps, <pre> for diagrams
+A 📝 Notation & Units box (blue) defining every variable and its unit
+A 📌 Summary box (amber) with 1-2 line key takeaway
+A 💡 Hint / Approach box (blue) with exam strategy for structuring the answer
+Solution modal layout:
+Top bar: badge tags (module, year, marks, difficulty, repeated) + zoom controls (−Zoom, %, +Zoom, Reset) + close button
+Question area: compact (max 25vh, scrollable, 13px font)
+Answer area: takes ALL remaining space (flex:1), always visible, scrollable
+Footer: Copy Question + Done
+PYQ cards must show:
+Header badges, question text, 💡 QUICK HINT inline, 📖 View Full Solution button
+Analyze the PYQ data to determine:
+Repeated questions/concepts across years
+Module weightage and frequency
+HIGH/MEDIUM/LOW priority classification
+MUST STUDY/STUDY/SKIM/SKIP categorization
+Predicted/probable questions
+Never-asked topics to skip
+Subject Details:
+Subject: [YOUR SUBJECT NAME]
+Code: [CODE]
+Course: [BRANCH/SEMESTER]
+Exam Pattern: [PATTERN]
+PYQ Years: [YEARS]
+Syllabus:
+[PASTE SYLLABUS HERE]
+PYQ Data:
+[PASTE ALL PYQ QUESTIONS HERE YEAR-WISE]
