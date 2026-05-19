@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚂 Railway, Airport & Tunnel Engineering — Exam Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════════ HEADER ══════════════════ -->
+<header class="header-banner">
+  <div class="header-container">
+    <h1 class="header-title">🚂 Railway, Airport &amp; Tunnel Engineering — Exam Dashboard</h1>
+    <p class="header-sub">CIVIL ENGINEERING (CE-603) | PYQ Analysis Engine: 2022–2025</p>
+    <div class="header-badge-row">
+      <span class="header-badge">📋 Q1 Compulsory (10×1m) + Any 4 of Q2–Q7 (15m each)</span>
+      <span class="header-badge">⏱️ 3 Hours</span>
+      <span class="header-badge">💯 Max: 70 / 80 Marks</span>
+      <span class="header-badge">📚 5 Modules</span>
+      <span class="header-badge">💡 55 Questions Analyzed</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════ STICKY NAV ══════════════════ -->
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <button class="nav-tab active"  onclick="switchTab(this,'s1')">📊 Priority Matrix</button>
+    <button class="nav-tab"         onclick="switchTab(this,'s2')">📈 PYQ Frequency</button>
+    <button class="nav-tab"         onclick="switchTab(this,'s3')">📚 Module Strategy</button>
+    <button class="nav-tab"         onclick="switchTab(this,'s4')">🗓️ Timetable</button>
+    <button class="nav-tab"         onclick="switchTab(this,'s5')">📝 PYQ Bank</button>
+    <button class="nav-tab"         onclick="switchTab(this,'s6')">🎯 Smart Syllabus</button>
+  </div>
+</nav>
+
+<!-- ══════════════════ MAIN ══════════════════ -->
+<main class="main-content">
+
+  <!-- ── TAB 1: Priority Matrix ── -->
+  <section id="s1" class="section active">
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="ic-label">Syllabus Topics</div>
+        <div class="ic-value">24</div>
+        <div class="ic-sub">Across 5 Modules</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-label">🔥 High Priority</div>
+        <div class="ic-value">11</div>
+        <div class="ic-sub">Appeared in 3+ years</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-label">⭐ Most Repeated</div>
+        <div class="ic-value" style="font-size:15px;color:#ef4444;display:flex;align-items:center;height:40px;">Superelevation &amp; Curves</div>
+        <div class="ic-sub">All 4 exam years</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-label">🎯 Guaranteed Score</div>
+        <div class="ic-value" style="font-size:15px;color:#059669;display:flex;align-items:center;height:40px;">Runway Length Correction</div>
+        <div class="ic-sub">10m numerical every year</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Module-Level Priority <span class="card-title-sub">Sorted by frequency &amp; weightage</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Module</th><th>Scope</th><th>Priority</th><th>Frequency</th><th>Marks</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="mod-tag m1">M1</span></td>
+              <td>Permanent Way &amp; Geometric Design</td>
+              <td><span class="ph">HIGH</span></td>
+              <td><div class="freq-bar"><div class="freq-track"><div class="freq-fill" style="width:100%"></div></div>4/4</div></td>
+              <td>20–25 m</td>
+              <td>Coning, creep, superelevation numericals appear every year.</td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m2">M2</span></td>
+              <td>Track Construction, Points, Signals, Traction</td>
+              <td><span class="pm">MEDIUM</span></td>
+              <td><div class="freq-bar"><div class="freq-track"><div class="freq-fill" style="width:75%"></div></div>3/4</div></td>
+              <td>15–20 m</td>
+              <td>Turnout sketches + hauling capacity numericals are staples.</td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m3">M3</span></td>
+              <td>Aircraft, Airport Planning &amp; Runway Design</td>
+              <td><span class="ph">HIGH</span></td>
+              <td><div class="freq-bar"><div class="freq-track"><div class="freq-fill" style="width:100%"></div></div>4/4</div></td>
+              <td>15–22 m</td>
+              <td>Runway correction numerical guaranteed every year.</td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m4">M4</span></td>
+              <td>Taxiway Design &amp; Pavement Structures</td>
+              <td><span class="pm">MEDIUM</span></td>
+              <td><div class="freq-bar"><div class="freq-track"><div class="freq-fill" style="width:75%"></div></div>3/4</div></td>
+              <td>10–15 m</td>
+              <td>Taxiway turning radius (Boeing 707) is a recurring numerical.</td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m5">M5</span></td>
+              <td>Tunnel Engineering (Soft + Hard Ground)</td>
+              <td><span class="ph">HIGH</span></td>
+              <td><div class="freq-bar"><div class="freq-track"><div class="freq-fill" style="width:100%"></div></div>4/4</div></td>
+              <td>15–20 m</td>
+              <td>Soft ground methods &amp; ventilation appear every paper.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Topic-Level Priority Matrix <span class="card-title-sub">Click 🔗 to see Related PYQs</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Module</th><th>Topic</th><th>Priority</th><th>Repeats</th><th>Marks</th><th>Difficulty</th><th>Related PYQs</th></tr></thead>
+          <tbody>
+            <tr class="mod-header"><td colspan="7">MODULE 1 — PERMANENT WAY &amp; GEOMETRIC DESIGN</td></tr>
+            <tr>
+              <td><span class="mod-tag m1">M1</span></td>
+              <td>Coning of Wheels (straight + curved track behaviour)</td>
+              <td><span class="ph">HIGH</span></td><td>3 Yrs</td><td>4–10 m</td><td><span class="dm">Medium</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('coning_wheels')">🔗 PYQs (2)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m1">M1</span></td>
+              <td>Superelevation &amp; Max Permissible Speed (numericals)</td>
+              <td><span class="ph">HIGH</span></td><td>4 Yrs</td><td>10 m</td><td><span class="dh">Hard</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('superelevation_calc')">🔗 PYQs (4)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m1">M1</span></td>
+              <td>Rail Wear — causes, classification &amp; limits</td>
+              <td><span class="pm">MEDIUM</span></td><td>3 Yrs</td><td>5–10 m</td><td><span class="de">Easy</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('rail_wear')">🔗 PYQs (1)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m1">M1</span></td>
+              <td>Creep of Rails — causes, effects &amp; remedies</td>
+              <td><span class="ph">HIGH</span></td><td>4 Yrs</td><td>1–5 m</td><td><span class="de">Easy</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('rail_creep')">🔗 PYQs (2)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m1">M1</span></td>
+              <td>Sleeper Density &amp; Ballast Depth calculations</td>
+              <td><span class="ph">HIGH</span></td><td>4 Yrs</td><td>1–10 m</td><td><span class="dm">Medium</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('sleeper_ballast')">🔗 PYQs (5)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m1">M1</span></td>
+              <td>Gauges — types, dimensions &amp; uni-gauge policy</td>
+              <td><span class="ph">HIGH</span></td><td>4 Yrs</td><td>5–10 m</td><td><span class="de">Easy</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('gauges_suitability')">🔗 PYQs (1)</button></td>
+            </tr>
+            <tr class="mod-header"><td colspan="7">MODULE 2 — TRACK CONSTRUCTION, POINTS &amp; SIGNALS</td></tr>
+            <tr>
+              <td><span class="mod-tag m2">M2</span></td>
+              <td>Points &amp; Crossings / Turnout layouts (RH &amp; LH sketches)</td>
+              <td><span class="ph">HIGH</span></td><td>4 Yrs</td><td>5–10 m</td><td><span class="dm">Medium</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('points_turnouts')">🔗 PYQs (1)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m2">M2</span></td>
+              <td>Hauling Capacity &amp; Tractive Resistances (numericals)</td>
+              <td><span class="ph">HIGH</span></td><td>4 Yrs</td><td>5–10 m</td><td><span class="dh">Hard</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('hauling_capacity')">🔗 PYQs (3)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m2">M2</span></td>
+              <td>Signaling Hierarchy — Outer, Home, Starter, CTC</td>
+              <td><span class="pm">MEDIUM</span></td><td>3 Yrs</td><td>4–6 m</td><td><span class="de">Easy</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('signaling_systems')">🔗 PYQs (0)</button></td>
+            </tr>
+            <tr class="mod-header"><td colspan="7">MODULE 3 — AIRPORT PLANNING &amp; RUNWAY DESIGN</td></tr>
+            <tr>
+              <td><span class="mod-tag m3">M3</span></td>
+              <td>Runway Length Corrections (Elev + Temp + Gradient numericals)</td>
+              <td><span class="ph">HIGH</span></td><td>4 Yrs</td><td>5–10 m</td><td><span class="dh">Hard</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('runway_corrections')">🔗 PYQs (3)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m3">M3</span></td>
+              <td>Windrose Diagram — Type I vs Type II</td>
+              <td><span class="pm">MEDIUM</span></td><td>2 Yrs</td><td>4–8 m</td><td><span class="dm">Medium</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('windrose_diagram')">🔗 PYQs (1)</button></td>
+            </tr>
+            <tr class="mod-header"><td colspan="7">MODULE 4 — TAXIWAY &amp; PAVEMENT DESIGN</td></tr>
+            <tr>
+              <td><span class="mod-tag m4">M4</span></td>
+              <td>Taxiway Turning Radius Design (Boeing 707 numericals)</td>
+              <td><span class="ph">HIGH</span></td><td>3 Yrs</td><td>6–10 m</td><td><span class="dh">Hard</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('taxiway_radius')">🔗 PYQs (4)</button></td>
+            </tr>
+            <tr class="mod-header"><td colspan="7">MODULE 5 — TUNNEL ENGINEERING</td></tr>
+            <tr>
+              <td><span class="mod-tag m5">M5</span></td>
+              <td>Driving Tunnels in Soft Ground (Drift, Needle Beam, Shield)</td>
+              <td><span class="ph">HIGH</span></td><td>3 Yrs</td><td>5–10 m</td><td><span class="dh">Hard</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('soft_soil_tunnels')">🔗 PYQs (1)</button></td>
+            </tr>
+            <tr>
+              <td><span class="mod-tag m5">M5</span></td>
+              <td>Tunnel Ventilation — necessity &amp; methods</td>
+              <td><span class="pm">MEDIUM</span></td><td>3 Yrs</td><td>5 m</td><td><span class="de">Easy</span></td>
+              <td><button class="related-btn" onclick="openRelatedModal('tunnel_ventilation')">🔗 PYQs (1)</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TAB 2: PYQ Frequency ── -->
+  <section id="s2" class="section">
+    <div class="card">
+      <div class="card-title">Topic-wise Frequency &amp; Verdict <span class="card-title-sub">2022–2025 Analysis</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Topic</th><th>Module</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>Total</th><th>Verdict</th><th>PYQs</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Sleeper Density &amp; Ballast Depth</b></td><td><span class="mod-tag m1">M1</span></td><td>1m</td><td>16m</td><td>11m</td><td>12m</td><td><b>40m</b></td><td><span class="ph">🔥 MUST DO</span></td><td><button class="related-btn" onclick="openRelatedModal('sleeper_ballast')">🔗</button></td></tr>
+            <tr><td><b>Locomotive Hauling Capacity</b></td><td><span class="mod-tag m2">M2</span></td><td>10m</td><td>10m</td><td>6m</td><td>10m</td><td><b>36m</b></td><td><span class="ph">🔥 MUST DO</span></td><td><button class="related-btn" onclick="openRelatedModal('hauling_capacity')">🔗</button></td></tr>
+            <tr><td><b>Points &amp; Crossings / Turnouts</b></td><td><span class="mod-tag m2">M2</span></td><td>10m</td><td>6m</td><td>5m</td><td>5m</td><td><b>26m</b></td><td><span class="ph">🔥 MUST DO</span></td><td><button class="related-btn" onclick="openRelatedModal('points_turnouts')">🔗</button></td></tr>
+            <tr><td><b>Superelevation &amp; Speed Design</b></td><td><span class="mod-tag m1">M1</span></td><td>1m</td><td>11m</td><td>7m</td><td>6m</td><td><b>25m</b></td><td><span class="ph">🔥 MUST DO</span></td><td><button class="related-btn" onclick="openRelatedModal('superelevation_calc')">🔗</button></td></tr>
+            <tr><td><b>Runway Length Corrections</b></td><td><span class="mod-tag m3">M3</span></td><td>—</td><td>10m</td><td>5m</td><td>10m</td><td><b>25m</b></td><td><span class="ph">🔥 MUST DO</span></td><td><button class="related-btn" onclick="openRelatedModal('runway_corrections')">🔗</button></td></tr>
+            <tr><td><b>Gauges &amp; Uni-Gauge Policy</b></td><td><span class="mod-tag m1">M1</span></td><td>10m</td><td>5m</td><td>6m</td><td>1m</td><td><b>22m</b></td><td><span class="ph">🔥 MUST DO</span></td><td><button class="related-btn" onclick="openRelatedModal('gauges_suitability')">🔗</button></td></tr>
+            <tr><td><b>Rail Wear — Classification &amp; Limits</b></td><td><span class="mod-tag m1">M1</span></td><td>10m</td><td>—</td><td>6m</td><td>5m</td><td><b>21m</b></td><td><span class="ph">🔥 MUST DO</span></td><td><button class="related-btn" onclick="openRelatedModal('rail_wear')">🔗</button></td></tr>
+            <tr><td><b>Coning of Wheels</b></td><td><span class="mod-tag m1">M1</span></td><td>10m</td><td>—</td><td>4m</td><td>5m</td><td><b>19m</b></td><td><span class="ph">🔥 MUST DO</span></td><td><button class="related-btn" onclick="openRelatedModal('coning_wheels')">🔗</button></td></tr>
+            <tr><td><b>Taxiway Turning Radius Design</b></td><td><span class="mod-tag m4">M4</span></td><td>1m</td><td>2m</td><td>6m</td><td>10m</td><td><b>19m</b></td><td><span class="pm">✅ DO IT</span></td><td><button class="related-btn" onclick="openRelatedModal('taxiway_radius')">🔗</button></td></tr>
+            <tr><td><b>Tunnel Soft Ground Methods</b></td><td><span class="mod-tag m5">M5</span></td><td>6m</td><td>5m</td><td>—</td><td>—</td><td><b>11m</b></td><td><span class="pm">✅ DO IT</span></td><td><button class="related-btn" onclick="openRelatedModal('soft_soil_tunnels')">🔗</button></td></tr>
+            <tr><td><b>Tunnel Ventilation</b></td><td><span class="mod-tag m5">M5</span></td><td>5m</td><td>—</td><td>—</td><td>5m</td><td><b>10m</b></td><td><span class="pm">✅ DO IT</span></td><td><button class="related-btn" onclick="openRelatedModal('tunnel_ventilation')">🔗</button></td></tr>
+            <tr><td><b>Windrose Diagram</b></td><td><span class="mod-tag m3">M3</span></td><td>—</td><td>8m</td><td>—</td><td>—</td><td><b>8m</b></td><td><span class="pm">✅ DO IT</span></td><td><button class="related-btn" onclick="openRelatedModal('windrose_diagram')">🔗</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💡 Expert Strategy Insights</div>
+      <ul style="font-size:14px;color:var(--ink2);line-height:2;margin-left:20px;list-style:disc;">
+        <li><b>Runway Length Correction</b> is a guaranteed 10-mark numerical. Master the three-step sequence: Elevation → Temperature → Gradient (35% combined cap check).</li>
+        <li><b>Hauling capacity</b> numerical appeared all 4 years. Know: F = μ × W_d; R_total = R₁ + Rg + Rc; set F = R to find train load or speed.</li>
+        <li><b>Superelevation</b> formula: e = G·V²/(127·R). Practice 2° curve problems (R = 860 m) — they appear repeatedly.</li>
+        <li><b>Turnout sketches</b>: practice drawing Right-Hand turnout labelling all 6 parts (Stock Rail, Tongue, Heel, Lead, Crossing/Frog, Check Rail).</li>
+        <li><b>Sleeper density</b> MCQ appears in every Q1. Memorise: N = M + x; spacing S = L/N; ballast depth d = (S − w)/2.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── TAB 3: Module Strategy ── -->
+  <section id="s3" class="section">
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:16px;color:var(--accent);">📚 Module-by-Module Exam Strategy</h2>
+
+    <details open>
+      <summary>MODULE 1 — Permanent Way &amp; Geometric Design &nbsp;<span class="ph">HIGH</span>&nbsp; ~25 Marks</summary>
+      <div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:10px;">Heaviest module. Every part of the Q1 MCQ section draws from here.</p>
+        <h4 style="color:var(--accent);margin-bottom:6px;">🎯 MASTER (do not skip)</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Superelevation formula e = G·V²/(127·R) + cant deficiency concept</li>
+          <li>Coning of wheels — behaviour on straight vs curved track with sketch</li>
+          <li>Sleeper density formula, ballast depth formula, spacing calculation</li>
+          <li>Creep — causes (wave action, percussion, temperature), effects, anchors</li>
+          <li>Gauges — BG/MG/NG dimensions + uni-gauge justification</li>
+        </ul>
+        <h4 style="color:var(--yellow);margin-bottom:6px;">📖 STUDY</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Rail wear — classification (top/side/joint), allowable limits</li>
+          <li>Cross-section of permanent way sketch with all dimensions</li>
+        </ul>
+        <h4 style="color:var(--muted);margin-bottom:6px;">❌ SKIP (never tested)</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Manufacturing specs of rail sections, steel chemistry, heat treatment</li>
+        </ul>
+        <div style="background:#faf7f2;border-left:3px solid var(--accent);padding:10px;border-radius:4px;font-size:12.5px;">
+          <b>Tip:</b> The 2° BG curve superelevation problem (R = 860 m) repeated in 2023 and 2025. Memorise the answer pattern: e ≈ 100 mm at 80 km/h.
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>MODULE 2 — Track Construction, Points &amp; Signals &nbsp;<span class="pm">MEDIUM</span>&nbsp; ~15 Marks</summary>
+      <div>
+        <h4 style="color:var(--accent);margin-bottom:6px;">🎯 MASTER</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Hauling capacity = μ × W_d; resistances: R₁, Rg, Rc formulas</li>
+          <li>Right-hand &amp; Left-hand turnout labeled sketches (6 components)</li>
+          <li>Diamond crossing sketch</li>
+        </ul>
+        <h4 style="color:var(--yellow);margin-bottom:6px;">📖 STUDY</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Signal hierarchy: Outer → Home → Starter → Advance Starter</li>
+          <li>Centralised Traffic Control (CTC) — working principle</li>
+        </ul>
+        <h4 style="color:var(--muted);margin-bottom:6px;">❌ SKIP</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Internal mechanics of interlocking frames; wood preservative chemistry</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>MODULE 3 — Airport Planning &amp; Runway Design &nbsp;<span class="ph">HIGH</span>&nbsp; ~20 Marks</summary>
+      <div>
+        <h4 style="color:var(--accent);margin-bottom:6px;">🎯 MASTER</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>3-step runway correction: Elevation (+7% per 300 m) → Temperature (+1% per °C above standard) → Gradient (+20% per 1% effective gradient). 35% combined cap on elev+temp.</li>
+          <li>ART formula: ART = T_a + (T_m − T_a)/3</li>
+          <li>Standard temperature at elevation h: T_std = 15 − 0.0065h</li>
+        </ul>
+        <h4 style="color:var(--yellow);margin-bottom:6px;">📖 STUDY</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Windrose Type I (direction + duration) vs Type II (direction + speed + duration)</li>
+          <li>Zoning laws and imaginary surfaces (conical, horizontal, transitional)</li>
+          <li>Pilot controls: Elevator (pitch), Rudder (yaw), Ailerons (roll)</li>
+        </ul>
+        <div style="background:#faf7f2;border-left:3px solid #ef4444;padding:10px;border-radius:4px;font-size:12.5px;margin-top:8px;">
+          <b>Warning:</b> Always apply corrections in the correct sequence and check the 35% cap. Many students apply the gradient correction to the wrong base length!
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>MODULE 4 — Taxiway Design &amp; Pavement &nbsp;<span class="pm">MEDIUM</span>&nbsp; ~12 Marks</summary>
+      <div>
+        <h4 style="color:var(--accent);margin-bottom:6px;">🎯 MASTER</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Speed-based turning radius: R₁ = V²/(125·f)</li>
+          <li>Geometry-based radius (Horonjeff): R₂ = W_b² / [0.5(W_t − T) − S]</li>
+          <li>ICAO minimum = 120 m for subsonic jets; design R = max(R₁, R₂, 120)</li>
+        </ul>
+        <h4 style="color:var(--yellow);margin-bottom:6px;">📖 STUDY</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Flexible vs Rigid pavement design principles for airports</li>
+          <li>Balanced field concept for jet aircraft engine failure</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>MODULE 5 — Tunnel Engineering &nbsp;<span class="ph">HIGH</span>&nbsp; ~18 Marks</summary>
+      <div>
+        <h4 style="color:var(--accent);margin-bottom:6px;">🎯 MASTER</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Soft ground methods: Forepoling, Needle Beam, Drift, Shield (TBM)</li>
+          <li>Ventilation: Natural vs Mechanical (Blow-in, Exhaust, Combined)</li>
+          <li>Advantages of tunnels over open cuts (6 points)</li>
+        </ul>
+        <h4 style="color:var(--yellow);margin-bottom:6px;">📖 STUDY</h4>
+        <ul style="font-size:13.5px;margin-left:20px;margin-bottom:10px;line-height:1.8;">
+          <li>Geological investigations before tunnel construction</li>
+          <li>Hard rock methods: Heading &amp; Bench, Full Face, Drift methods</li>
+          <li>Tunnel route selection criteria</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ── TAB 4: Timetable ── -->
+  <section id="s4" class="section">
+    <div class="card">
+      <div class="card-title">🗓️ 14-Day Intensive Study Timetable</div>
+      <p style="font-size:13.5px;color:var(--ink2);margin-bottom:14px;">HIGH priority topics in Week 1 · PYQ solving + revision in Week 2</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Day</th><th>Module</th><th>Topics to Cover</th><th>Hours</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr class="day-high"><td><b>Day 1</b></td><td><span class="mod-tag m1">M1</span></td><td>Permanent way cross-section; flat-footed rail dimensions; rail wear classification</td><td>4 h</td><td><span class="ph">HIGH</span></td></tr>
+            <tr class="day-high"><td><b>Day 2</b></td><td><span class="mod-tag m1">M1</span></td><td>Coning of wheels (straight + curve); rail creep causes, effects, remedies</td><td>4 h</td><td><span class="ph">HIGH</span></td></tr>
+            <tr class="day-high"><td><b>Day 3</b></td><td><span class="mod-tag m1">M1</span></td><td>Superelevation formula + numericals; cant deficiency; Martin's formula</td><td>5 h</td><td><span class="ph">HIGH</span></td></tr>
+            <tr class="day-med"><td><b>Day 4</b></td><td><span class="mod-tag m1">M1</span></td><td>Sleeper density M+x formula; ballast depth d=(S−w)/2; spacing calculation</td><td>4 h</td><td><span class="pm">MED</span></td></tr>
+            <tr class="day-high"><td><b>Day 5</b></td><td><span class="mod-tag m2">M2</span></td><td>Right-hand &amp; left-hand turnout sketches; all 6 components labeled</td><td>5 h</td><td><span class="ph">HIGH</span></td></tr>
+            <tr class="day-high"><td><b>Day 6</b></td><td><span class="mod-tag m2">M2</span></td><td>Hauling capacity formula; R₁, Rg, Rc formulas; full numerical problems</td><td>5 h</td><td><span class="ph">HIGH</span></td></tr>
+            <tr class="day-med"><td><b>Day 7</b></td><td><span class="mod-tag m2">M2</span></td><td>Signal types &amp; hierarchy; interlocking principles; CTC system</td><td>3 h</td><td><span class="pm">MED</span></td></tr>
+            <tr class="day-high"><td><b>Day 8</b></td><td><span class="mod-tag m3">M3</span></td><td>Runway correction 3-step formula; ART; standard temp; 35% rule — practise all 3 PYQ numericals</td><td>5 h</td><td><span class="ph">HIGH</span></td></tr>
+            <tr class="day-med"><td><b>Day 9</b></td><td><span class="mod-tag m3">M3</span></td><td>Windrose diagrams; zoning laws; imaginary surfaces; site selection data</td><td>4 h</td><td><span class="pm">MED</span></td></tr>
+            <tr class="day-high"><td><b>Day 10</b></td><td><span class="mod-tag m4">M4</span></td><td>Taxiway turning radius (R₁ speed-based + R₂ wheelbase geometry); Boeing 707 numericals</td><td>4 h</td><td><span class="ph">HIGH</span></td></tr>
+            <tr class="day-high"><td><b>Day 11</b></td><td><span class="mod-tag m5">M5</span></td><td>Soft ground tunnelling: Forepoling, Needle Beam, Shield; Hard rock: Heading &amp; Bench</td><td>5 h</td><td><span class="ph">HIGH</span></td></tr>
+            <tr class="day-med"><td><b>Day 12</b></td><td><span class="mod-tag m5">M5</span></td><td>Tunnel ventilation (natural + mechanical); geological investigation; route selection</td><td>4 h</td><td><span class="pm">MED</span></td></tr>
+            <tr class="day-rev"><td><b>Day 13</b></td><td>All</td><td>Formula sheet review; re-solve all 2024 &amp; 2025 numerical questions</td><td>6 h</td><td><span class="pl">REVISION</span></td></tr>
+            <tr class="day-rev"><td><b>Day 14</b></td><td>All</td><td>Timed mock exam (3 hrs); review all sketches; weak areas</td><td>4 h</td><td><span class="pl">REVISION</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="background:var(--card2);border:1px solid var(--border);padding:14px;border-radius:8px;margin-top:4px;">
+        <b>Daily Split:</b>&nbsp;
+        Morning 2h = Concepts &amp; Derivations &nbsp;|&nbsp;
+        Afternoon 2h = Solve Numericals &nbsp;|&nbsp;
+        Evening 1h = Sketch Practice (Turnouts, Windrose, Permanent Way)
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TAB 5: PYQ Bank ── -->
+  <section id="s5" class="section">
+    <!-- Filter Panel -->
+    <div class="filter-panel">
+      <h3>🔍 Advanced Smart Filter Engine</h3>
+
+      <input type="text" id="search-input" class="search-input"
+        placeholder="Search by keyword — e.g. coning, taxiway, superelevation, gradient, shield..."
+        oninput="applyFilters()">
+
+      <div class="filter-grid">
+        <div>
+          <label class="filter-label">MODULE</label>
+          <select id="sel-module" class="filter-select" onchange="applyFilters()">
+            <option value="all">All Modules</option>
+            <option value="m1">M1: Permanent Way</option>
+            <option value="m2">M2: Track &amp; Signals</option>
+            <option value="m3">M3: Runway Design</option>
+            <option value="m4">M4: Taxiway &amp; Pavement</option>
+            <option value="m5">M5: Tunnel Engineering</option>
+          </select>
+        </div>
+        <div>
+          <label class="filter-label">YEAR</label>
+          <select id="sel-year" class="filter-select" onchange="applyFilters()">
+            <option value="all">All Years</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+          </select>
+        </div>
+        <div>
+          <label class="filter-label">DIFFICULTY</label>
+          <select id="sel-diff" class="filter-select" onchange="applyFilters()">
+            <option value="all">All Difficulties</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <div>
+          <label class="filter-label">QUESTION TYPE</label>
+          <select id="sel-qtype" class="filter-select" onchange="applyFilters()">
+            <option value="all">All Types</option>
+            <option value="short">Short / MCQ (1 m)</option>
+            <option value="long">Long / Numerical (5–10 m)</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;">SMART FILTERS (AND logic with above)</div>
+      <div class="smart-row">
+        <label id="lbl-imp"  class="smart-lbl"><input type="checkbox" id="chk-imp"  onchange="toggleSmart('chk-imp','lbl-imp')">   ⭐ Important</label>
+        <label id="lbl-high" class="smart-lbl"><input type="checkbox" id="chk-high" onchange="toggleSmart('chk-high','lbl-high')"> 🔥 High Chance</label>
+        <label id="lbl-rep"  class="smart-lbl"><input type="checkbox" id="chk-rep"  onchange="toggleSmart('chk-rep','lbl-rep')">   🔁 Repeated</label>
+        <label id="lbl-prob" class="smart-lbl"><input type="checkbox" id="chk-prob" onchange="toggleSmart('chk-prob','lbl-prob')"> 🎯 Probable</label>
+        <label id="lbl-conc" class="smart-lbl"><input type="checkbox" id="chk-conc" onchange="toggleSmart('chk-conc','lbl-conc')"> 🧠 Conceptual</label>
+        <label id="lbl-form" class="smart-lbl"><input type="checkbox" id="chk-form" onchange="toggleSmart('chk-form','lbl-form')"> ⚡ Formula-Based</label>
+      </div>
+
+      <div class="chips-row">
+        <div class="chips-list" id="chips-list"></div>
+        <button class="reset-all-btn" onclick="resetFilters()">↺ Reset All Filters</button>
+      </div>
+    </div>
+
+    <!-- Results + Sort -->
+    <div class="results-row">
+      <span id="result-count">Loading…</span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:13px;">Sort:</span>
+        <select id="sel-sort" class="sort-select" onchange="applyFilters()">
+          <option value="default">Default Order</option>
+          <option value="marks-hi">Marks: High → Low</option>
+          <option value="marks-lo">Marks: Low → High</option>
+          <option value="imp-hi">Importance: High → Low</option>
+          <option value="rep-hi">Most Repeated First</option>
+          <option value="year-new">Newest Year First</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- PYQ Grid (populated by JS) -->
+    <div class="pyq-grid" id="pyq-grid"></div>
+  </section>
+
+  <!-- ── TAB 6: Smart Syllabus ── -->
+  <section id="s6" class="section">
+    <div class="card">
+      <div class="card-title">🎯 Evidence-Based Smart Syllabus Guide</div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px;font-size:13px;">
+        <span>🔴 <b>MUST STUDY</b> — appeared 3+ years</span>
+        <span>🟡 <b>STUDY</b> — appeared 1–2 years</span>
+        <span>🔵 <b>SKIM</b> — MCQ/short only</span>
+        <span>⚫ <b>SKIP</b> — never appeared</span>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card" style="border-left:4px solid #ef4444;">
+          <div class="ic-label" style="color:#ef4444;">Must Study</div>
+          <div class="ic-value">11</div>
+          <div class="ic-sub">~75% of exam marks</div>
+        </div>
+        <div class="info-card" style="border-left:4px solid #d97706;">
+          <div class="ic-label" style="color:#d97706;">Study</div>
+          <div class="ic-value">8</div>
+          <div class="ic-sub">~18% of exam marks</div>
+        </div>
+        <div class="info-card" style="border-left:4px solid #1d4ed8;">
+          <div class="ic-label" style="color:#1d4ed8;">Skim</div>
+          <div class="ic-value">3</div>
+          <div class="ic-sub">MCQ level only</div>
+        </div>
+        <div class="info-card" style="border-left:4px solid #8a7a65;">
+          <div class="ic-label" style="color:#8a7a65;">Skip</div>
+          <div class="ic-value">2</div>
+          <div class="ic-sub">Zero PYQ evidence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <h4 style="color:#b45309;font-weight:800;margin-bottom:6px;">⚠️ Strategic Skip List — Do NOT waste time on these</h4>
+      <ul style="font-size:13px;margin-left:18px;color:var(--ink2);line-height:1.8;">
+        <li>Detailed tunnel lining stress calculations (Module 5)</li>
+        <li>Wood preservative chemistry for wooden sleepers (Module 2)</li>
+        <li>Regional airport coordination authority legal procedures (Module 3)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📝 Pre-Exam Checklist <span class="card-title-sub">Saves automatically in your browser</span></div>
+      <div class="grid-2">
+        <div>
+          <h4 style="color:#ef4444;border-bottom:2px solid #fee2e2;padding-bottom:4px;margin-bottom:10px;">🔴 MUST STUDY</h4>
+          <div class="checklist-item"><input type="checkbox" id="c1" class="chk-persist" onchange="saveCheck(this)"><label for="c1">Sketch Permanent Way cross-section (rails, sleepers, ballast, subgrade, drainage)</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c2" class="chk-persist" onchange="saveCheck(this)"><label for="c2">Write & derive superelevation formula; solve 2° BG curve numerical (R=860m)</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c3" class="chk-persist" onchange="saveCheck(this)"><label for="c3">Explain coning of wheels on straight and curved track with sketch</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c4" class="chk-persist" onchange="saveCheck(this)"><label for="c4">Draw labeled Right-hand &amp; Left-hand turnout (all 6 parts)</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c5" class="chk-persist" onchange="saveCheck(this)"><label for="c5">Solve Hauling Capacity numerical with grade + curve resistance</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c6" class="chk-persist" onchange="saveCheck(this)"><label for="c6">Master 3-step Runway Length Correction (Elevation → Temp → Gradient)</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c7" class="chk-persist" onchange="saveCheck(this)"><label for="c7">Solve Taxiway Turning Radius (Boeing 707 wheelbase + speed formula)</label></div>
+        </div>
+        <div>
+          <h4 style="color:#d97706;border-bottom:2px solid #fffbeb;padding-bottom:4px;margin-bottom:10px;">🟡 STUDY / PRACTICE</h4>
+          <div class="checklist-item"><input type="checkbox" id="c8"  class="chk-persist" onchange="saveCheck(this)"><label for="c8">Ballast cushion depth formula: d = (S − w)/2</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c9"  class="chk-persist" onchange="saveCheck(this)"><label for="c9">Explain Windrose Type I vs Type II diagrams for runway orientation</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c10" class="chk-persist" onchange="saveCheck(this)"><label for="c10">Compare soft-ground tunnelling methods (Forepoling, Needle Beam, Shield, Drift)</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c11" class="chk-persist" onchange="saveCheck(this)"><label for="c11">Explain tunnel ventilation necessity + Blow-in vs Exhaust systems</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c12" class="chk-persist" onchange="saveCheck(this)"><label for="c12">Negative superelevation — concept &amp; when it is mandatory</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c13" class="chk-persist" onchange="saveCheck(this)"><label for="c13">Signal hierarchy: Outer → Home → Starter → Advance Starter</label></div>
+          <div class="checklist-item"><input type="checkbox" id="c14" class="chk-persist" onchange="saveCheck(this)"><label for="c14">Rail wear classification (Top, Lateral, Joint) + allowable limits</label></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════ SOLUTION MODAL ══════════════════ -->
+<div id="sol-modal" class="modal-overlay">
+  <div id="modal-box" class="modal-box">
+    <div class="modal-head">
+      <div id="modal-tags" class="modal-tags"></div>
+      <div class="modal-controls">
+        <button class="zoom-btn" onclick="adjustZoom(-10)">− Zoom</button>
+        <span id="zoom-lbl" class="zoom-lbl">100%</span>
+        <button class="zoom-btn" onclick="adjustZoom(10)">+ Zoom</button>
+        <button class="zoom-btn" onclick="resetZoom()">↺ Reset</button>
+      </div>
+      <button class="modal-close" onclick="closeSolutionModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <!-- QUESTION — compact, scrollable if long -->
+      <div class="modal-question">
+        <div id="modal-question-text"></div>
+      </div>
+      <!-- ANSWER — takes maximum remaining space -->
+      <div id="ans-scroll" class="ans-scroll">
+        <div id="ans-content" class="ans-content"></div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button id="copy-btn" class="copy-btn" onclick="copyQuestion()">📋 Copy Question</button>
+      <button class="done-btn" onclick="closeSolutionModal()">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ RELATED PYQ MODAL ══════════════════ -->
+<div id="rel-modal" class="modal-overlay">
+  <div class="modal-box" style="max-width:680px;">
+    <div class="modal-head">
+      <h3 style="font-size:16px;font-weight:800;color:var(--ink);">🔗 Related PYQs — Click to view full solution</h3>
+      <button class="modal-close" onclick="closeRelatedModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="related-list" class="related-list"></div>
+    </div>
+    <div class="modal-foot">
+      <div></div>
+      <button class="done-btn" onclick="closeRelatedModal()">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ SCRIPTS ══════════════════ -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
