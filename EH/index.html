@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CE-301 Engineering Hydrology | ASTU Exam Prep Dashboard</title>
+    <!-- Google Fonts: Outfit & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- KaTeX CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GMRi4iYJe5LfTLtZiEa3LHBroAqTC8JJcGAbOJODYgYYuHpYc5VMXAMZdV9CR2HN" crossorigin="anonymous">
+
+    <!-- KaTeX JS + auto-render (CDN) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h62lII4aTLzfcObHZs56e4bYbYVwd5n8GQhy167g7Jydx54JcxfYeJaKPXY" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+
+    <!-- Local assets (same folder) -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="data.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-container">
+        <div class="logo-section">
+          <div class="logo-badge">
+            <svg style="width: 2rem; height: 2rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <div class="logo-text">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <h1>ASTU EXAM PORTAL</h1>
+              <span style="background-color: #fef3c7; color: #92400e; font-size: 0.65rem; font-weight: 700; padding: 0.125rem 0.375rem; border-radius: 9999px; border: 1px solid #f59e0b">OFFLINE MODE</span>
+            </div>
+            <p>CE-301: Engineering Hydrology &bull; Semester 5/6 Civil Engineering</p>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <div style="text-align: right">
+            <div class="progress-label">Syllabus Covered</div>
+            <div class="progress-number" id="progress-covered">0/20 Topics (0%)</div>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs-container">
+        <div class="tabs-inner">
+          <button class="tab-btn active" data-tab="priority">📊 Priority Matrix</button>
+          <button class="tab-btn" data-tab="frequency">📈 PYQ Frequency</button>
+          <button class="tab-btn" data-tab="strategy">📚 Module Strategy</button>
+          <button class="tab-btn" data-tab="timetable">🗓️ Timetable (14-Day)</button>
+          <button class="tab-btn" data-tab="pyq-bank">📝 PYQ Bank</button>
+          <button class="tab-btn" data-tab="syllabus">🎯 Smart Syllabus</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- SECTION 1: PRIORITY MATRIX -->
+      <section id="priority-section" class="dashboard-section active">
+        <div style="background-color: var(--card-bg); padding: 1.5rem; border-radius: 0.75rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem">
+          <h2 style="color: var(--primary-accent); margin-bottom: 0.5rem">🎯 Strategic Priority Matrix</h2>
+          <p style="font-size: 0.9rem; color: #475569; margin: 0">
+            Analysis of the past 4 years of exam questions shows that <b>~60% of all marks</b> are concentrated in just 6 key numerical topics.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- High Priority -->
+          <div class="card" style="border-left: 4px solid var(--success-color)">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem">
+                <h3 style="color: var(--success-color); font-size: 1.125rem; margin: 0;">🔴 HIGH PRIORITY</h3>
+                <span class="badge" style="background-color: #fef2f2; color: #991b1b; border: 1px solid #fecaca">~60% of Marks</span>
+              </div>
+              <p style="font-size: 0.75rem; color: #64748b; margin-bottom: 1rem">Master these immediately.</p>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem">
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Φ-index & Infiltration</div><div style="font-size: 0.7rem; color: #64748b">Infiltration capacity and indices.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'phi-index')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Muskingum Flood Routing</div><div style="font-size: 0.7rem; color: #64748b">Channel routing tables.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'Muskingum')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">S-Curve & UH Duration</div><div style="font-size: 0.7rem; color: #64748b">D-hr to T-hr UH.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'S-curve')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Snyder's Synthetic UH</div><div style="font-size: 0.7rem; color: #64748b">Ungauged catchment lag & peak.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'Snyder')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Gumbel's Peak Flood</div><div style="font-size: 0.7rem; color: #64748b">Flood frequency analysis.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'Gumbel')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Raingauge Adequacy</div><div style="font-size: 0.7rem; color: #64748b">Network adequacy & error.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'adequacy')">View PYQs</button>
+                </div>
+              </div>
+            </div>
+            <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 1.5rem; font-size: 0.7rem; color: #94a3b8; font-family: monospace">Verdict: Non-negotiable for passing.</div>
+          </div>
+
+          <!-- Medium Priority -->
+          <div class="card" style="border-left: 4px solid #f59e0b">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem">
+                <h3 style="color: #d97706; font-size: 1.125rem; margin: 0;">🟡 MEDIUM PRIORITY</h3>
+                <span class="badge" style="background-color: #fffbeb; color: #b45309; border: 1px solid #fef08a">~25% of Marks</span>
+              </div>
+              <p style="font-size: 0.75rem; color: #64748b; margin-bottom: 1rem">Solidifies passing margin.</p>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem">
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Evaporation Budget Methods</div><div style="font-size: 0.7rem; color: #64748b">Water and Energy budget.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'evaporation')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Atmospheric Humidity</div><div style="font-size: 0.7rem; color: #64748b">Dew point, RH, specific humidity.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'humidity')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Double Mass Curve</div><div style="font-size: 0.7rem; color: #64748b">Record consistency.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'Double mass')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Rational Peak Flow</div><div style="font-size: 0.7rem; color: #64748b">Culvert design.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'Rational')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Base Flow Separation</div><div style="font-size: 0.7rem; color: #64748b">Direct runoff hydrograph.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'separation')">View PYQs</button>
+                </div>
+              </div>
+            </div>
+            <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 1.5rem; font-size: 0.7rem; color: #94a3b8; font-family: monospace">Verdict: Elevates grade to Distinction.</div>
+          </div>
+
+          <!-- Low Priority -->
+          <div class="card" style="border-left: 4px solid #16a34a">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem">
+                <h3 style="color: #16a34a; font-size: 1.125rem; margin: 0;">🟢 LOW / SKIM</h3>
+                <span class="badge" style="background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0">~15% of Marks</span>
+              </div>
+              <p style="font-size: 0.75rem; color: #64748b; margin-bottom: 1rem">Theoretical topics. Skim before exam.</p>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem">
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Precipitation Forms</div><div style="font-size: 0.7rem; color: #64748b">Glaze, Sleet, Hail.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'precipitation')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Hydrologic Cycle</div><div style="font-size: 0.7rem; color: #64748b">Schematics & water budget.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'hydrologic')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Flow Duration Curve</div><div style="font-size: 0.7rem; color: #64748b">Dependability.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'duration')">View PYQs</button>
+                </div>
+                <div style="background-color: #fdfbfa; border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center">
+                  <div><div style="font-size: 0.85rem; font-weight: 700">Flood Recurrence Series</div><div style="font-size: 0.7rem; color: #64748b">Annual vs Partial.</div></div>
+                  <button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.7rem; font-weight: 700; border: 1px solid var(--border-color)" onclick="navigateToPyq('search', 'series')">View PYQs</button>
+                </div>
+              </div>
+            </div>
+            <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 1.5rem; font-size: 0.7rem; color: #94a3b8; font-family: monospace">Verdict: Minimal preparation needed.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: PYQ FREQUENCY -->
+      <section id="frequency-section" class="dashboard-section">
+        <div style="background-color: var(--card-bg); padding: 1.5rem; border-radius: 0.75rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem">
+          <h2 style="color: var(--primary-accent); margin-bottom: 0.5rem">📈 Year-wise Marks & Frequency Matrix</h2>
+          <p style="font-size: 0.9rem; color: #475569; margin: 0">Marks per module across the last four years.</p>
+        </div>
+        <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+          <div class="answer-table-wrapper" style="margin: 0">
+            <table class="answer-table" style="margin: 0">
+              <thead><tr>
+                <th style="padding: 1rem">Module</th><th style="padding: 1rem; text-align: center">2022</th><th style="padding: 1rem; text-align: center">2023</th><th style="padding: 1rem; text-align: center">2024</th><th style="padding: 1rem; text-align: center">2025</th><th style="padding: 1rem">Verdict</th><th style="padding: 1rem; text-align: center">Explore</th>
+              </tr></thead>
+              <tbody>
+                <tr><td style="padding: 1rem; font-weight: 700">Module 1: Introduction</td><td style="text-align: center; font-family: monospace">1m</td><td style="text-align: center; font-family: monospace">5m</td><td style="text-align: center; font-family: monospace">1m</td><td style="text-align: center; font-family: monospace">5m</td><td><span class="badge" style="background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0">Minimal Theory</span></td><td style="text-align: center"><button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem" onclick="navigateToPyq('module', '1')">Browse &rarr;</button></td></tr>
+                <tr><td style="padding: 1rem; font-weight: 700">Module 2: Weather & Precipitation</td><td style="text-align: center; font-family: monospace">17m</td><td style="text-align: center; font-family: monospace">17m</td><td style="text-align: center; font-family: monospace">11m</td><td style="text-align: center; font-family: monospace">11m</td><td><span class="badge" style="background-color: #fef2f2; color: #991b1b; border: 1px solid #fecaca">Highly Recommended</span></td><td style="text-align: center"><button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem" onclick="navigateToPyq('module', '2')">Browse &rarr;</button></td></tr>
+                <tr><td style="padding: 1rem; font-weight: 700">Module 3: Infiltration</td><td style="text-align: center; font-family: monospace">16m</td><td style="text-align: center; font-family: monospace">16m</td><td style="text-align: center; font-family: monospace">11m</td><td style="text-align: center; font-family: monospace">12m</td><td><span class="badge" style="background-color: #fef2f2; color: #991b1b; border: 1px solid #fecaca">Core Numerical</span></td><td style="text-align: center"><button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem" onclick="navigateToPyq('module', '3')">Browse &rarr;</button></td></tr>
+                <tr><td style="padding: 1rem; font-weight: 700">Module 4: Evapotranspiration</td><td style="text-align: center; font-family: monospace">1m</td><td style="text-align: center; font-family: monospace">16m</td><td style="text-align: center; font-family: monospace">10m</td><td style="text-align: center; font-family: monospace">7m</td><td><span class="badge" style="background-color: #fffbeb; color: #92400e; border: 1px solid #fef08a">Evaporation Focus</span></td><td style="text-align: center"><button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem" onclick="navigateToPyq('module', '4')">Browse &rarr;</button></td></tr>
+                <tr><td style="padding: 1rem; font-weight: 700">Module 5: Runoff</td><td style="text-align: center; font-family: monospace">9m</td><td style="text-align: center; font-family: monospace">1m</td><td style="text-align: center; font-family: monospace">3m</td><td style="text-align: center; font-family: monospace">10m</td><td><span class="badge" style="background-color: #fffbeb; color: #92400e; border: 1px solid #fef08a">Theory + Calc</span></td><td style="text-align: center"><button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem" onclick="navigateToPyq('module', '5')">Browse &rarr;</button></td></tr>
+                <tr><td style="padding: 1rem; font-weight: 700">Module 6: Hydrograph</td><td style="text-align: center; font-family: monospace">24m</td><td style="text-align: center; font-family: monospace">16m</td><td style="text-align: center; font-family: monospace">26m</td><td style="text-align: center; font-family: monospace">22m</td><td><span class="badge" style="background-color: #fef2f2; color: #991b1b; border: 1px solid #fecaca">Supreme High Yield</span></td><td style="text-align: center"><button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem" onclick="navigateToPyq('module', '6')">Browse &rarr;</button></td></tr>
+                <tr><td style="padding: 1rem; font-weight: 700">Module 7: Flood Estimation</td><td style="text-align: center; font-family: monospace">16m</td><td style="text-align: center; font-family: monospace">16m</td><td style="text-align: center; font-family: monospace">10m</td><td style="text-align: center; font-family: monospace">13m</td><td><span class="badge" style="background-color: #fef2f2; color: #991b1b; border: 1px solid #fecaca">Core Math Focus</span></td><td style="text-align: center"><button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem" onclick="navigateToPyq('module', '7')">Browse &rarr;</button></td></tr>
+                <tr><td style="padding: 1rem; font-weight: 700">Module 8: Flood Routing</td><td style="text-align: center; font-family: monospace">16m</td><td style="text-align: center; font-family: monospace">11m</td><td style="text-align: center; font-family: monospace">12m</td><td style="text-align: center; font-family: monospace">16m</td><td><span class="badge" style="background-color: #fef2f2; color: #991b1b; border: 1px solid #fecaca">Routing Calc</span></td><td style="text-align: center"><button class="tab-btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem" onclick="navigateToPyq('module', '8')">Browse &rarr;</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: MODULE STRATEGY -->
+      <section id="strategy-section" class="dashboard-section">
+        <div style="background-color: var(--card-bg); padding: 1.5rem; border-radius: 0.75rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem">
+          <h2 style="color: var(--primary-accent); margin-bottom: 0.5rem">📚 Module-level Strategy Guide</h2>
+          <p style="font-size: 0.9rem; color: #475569; margin: 0">Master / Skim / Skip per module.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem">
+          <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+            <div style="background-color: #fcf9f4; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center">
+              <div><h3 style="margin: 0; color: var(--primary-accent)">Module 1: Introduction</h3><span style="font-size: 0.75rem; color: #64748b">Hydrologic cycle, Global Water Budget.</span></div>
+              <span class="badge" style="background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-family: monospace">Weight: 5%</span>
+            </div>
+            <div style="padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem">
+              <div style="background-color: #fef2f2; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #991b1b; font-size: 0.85rem; margin-bottom: 0.5rem">🎓 Master</h4><p style="font-size: 0.75rem; margin: 0; color: #7f1d1d">Schematic representation of Hydrologic cycle.</p></div>
+              <div style="background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #92400e; font-size: 0.85rem; margin-bottom: 0.5rem">📖 Skim</h4><p style="font-size: 0.75rem; margin: 0; color: #78350f">Global water budget statistics, history.</p></div>
+              <div style="background-color: #f0fdf4; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #166534; font-size: 0.85rem; margin-bottom: 0.5rem">⚠️ Skip</h4><p style="font-size: 0.75rem; margin: 0; color: #14532d">Non-examinable timeline details.</p></div>
+            </div>
+          </div>
+          <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+            <div style="background-color: #fcf9f4; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center">
+              <div><h3 style="margin: 0; color: var(--primary-accent)">Module 2: Weather & Precipitation</h3><span style="font-size: 0.75rem; color: #64748b">Humidity, rain gauges, network adequacy.</span></div>
+              <span class="badge" style="background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-family: monospace">Weight: 20%</span>
+            </div>
+            <div style="padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem">
+              <div style="background-color: #fef2f2; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #991b1b; font-size: 0.85rem; margin-bottom: 0.5rem">🎓 Master</h4><p style="font-size: 0.75rem; margin: 0; color: #7f1d1d">Thiessen polygon, double mass curve, optimum gauge density, dew point.</p></div>
+              <div style="background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #92400e; font-size: 0.85rem; margin-bottom: 0.5rem">📖 Skim</h4><p style="font-size: 0.75rem; margin: 0; color: #78350f">Precipitation mechanisms (cooling, condensation).</p></div>
+              <div style="background-color: #f0fdf4; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #166534; font-size: 0.85rem; margin-bottom: 0.5rem">⚠️ Skip</h4><p style="font-size: 0.75rem; margin: 0; color: #14532d">AWS/radar detailed calculations.</p></div>
+            </div>
+          </div>
+          <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+            <div style="background-color: #fcf9f4; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center">
+              <div><h3 style="margin: 0; color: var(--primary-accent)">Module 3: Infiltration</h3><span style="font-size: 0.75rem; color: #64748b">Horton's curve, infiltration indices.</span></div>
+              <span class="badge" style="background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-family: monospace">Weight: 15%</span>
+            </div>
+            <div style="padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem">
+              <div style="background-color: #fef2f2; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #991b1b; font-size: 0.85rem; margin-bottom: 0.5rem">🎓 Master</h4><p style="font-size: 0.75rem; margin: 0; color: #7f1d1d">Horton's parameter fitting, Φ-index with initial loss.</p></div>
+              <div style="background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #92400e; font-size: 0.85rem; margin-bottom: 0.5rem">📖 Skim</h4><p style="font-size: 0.75rem; margin: 0; color: #78350f">Double ring infiltrometer, factors affecting infiltration.</p></div>
+              <div style="background-color: #f0fdf4; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #166534; font-size: 0.85rem; margin-bottom: 0.5rem">⚠️ Skip</h4><p style="font-size: 0.75rem; margin: 0; color: #14532d">Flooding-type infiltrometer calibration.</p></div>
+            </div>
+          </div>
+          <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+            <div style="background-color: #fcf9f4; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center">
+              <div><h3 style="margin: 0; color: var(--primary-accent)">Module 4: Evapotranspiration</h3><span style="font-size: 0.75rem; color: #64748b">Water/Energy budget, Lysimeter.</span></div>
+              <span class="badge" style="background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-family: monospace">Weight: 10%</span>
+            </div>
+            <div style="padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem">
+              <div style="background-color: #fef2f2; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #991b1b; font-size: 0.85rem; margin-bottom: 0.5rem">🎓 Master</h4><p style="font-size: 0.75rem; margin: 0; color: #7f1d1d">Reservoir water budget, seepage volume estimations.</p></div>
+              <div style="background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #92400e; font-size: 0.85rem; margin-bottom: 0.5rem">📖 Skim</h4><p style="font-size: 0.75rem; margin: 0; color: #78350f">Energy budget, Lysimeter, Cetyl alcohol inhibitor.</p></div>
+              <div style="background-color: #f0fdf4; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #166534; font-size: 0.85rem; margin-bottom: 0.5rem">⚠️ Skip</h4><p style="font-size: 0.75rem; margin: 0; color: #14532d">Thornthwaite, Blaney-Criddle complex calcs.</p></div>
+            </div>
+          </div>
+          <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+            <div style="background-color: #fcf9f4; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center">
+              <div><h3 style="margin: 0; color: var(--primary-accent)">Module 5: Runoff</h3><span style="font-size: 0.75rem; color: #64748b">Empirical formulae, Rational method.</span></div>
+              <span class="badge" style="background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-family: monospace">Weight: 10%</span>
+            </div>
+            <div style="padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem">
+              <div style="background-color: #fef2f2; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #991b1b; font-size: 0.85rem; margin-bottom: 0.5rem">🎓 Master</h4><p style="font-size: 0.75rem; margin: 0; color: #7f1d1d">Surface runoff from mass curve, equivalent runoff coefficient.</p></div>
+              <div style="background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #92400e; font-size: 0.85rem; margin-bottom: 0.5rem">📖 Skim</h4><p style="font-size: 0.75rem; margin: 0; color: #78350f">Flow duration curve, stream order/density.</p></div>
+              <div style="background-color: #f0fdf4; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #166534; font-size: 0.85rem; margin-bottom: 0.5rem">⚠️ Skip</h4><p style="font-size: 0.75rem; margin: 0; color: #14532d">Hydrologic empirical formulas for soils.</p></div>
+            </div>
+          </div>
+          <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+            <div style="background-color: #fcf9f4; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center">
+              <div><h3 style="margin: 0; color: var(--primary-accent)">Module 6: Hydrograph</h3><span style="font-size: 0.75rem; color: #64748b">UH, S-curve, Synthetic UH.</span></div>
+              <span class="badge" style="background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-family: monospace">Weight: 20%</span>
+            </div>
+            <div style="padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem">
+              <div style="background-color: #fef2f2; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #991b1b; font-size: 0.85rem; margin-bottom: 0.5rem">🎓 Master</h4><p style="font-size: 0.75rem; margin: 0; color: #7f1d1d">S-curve UH duration changes, Snyder's synthetic UH.</p></div>
+              <div style="background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #92400e; font-size: 0.85rem; margin-bottom: 0.5rem">📖 Skim</h4><p style="font-size: 0.75rem; margin: 0; color: #78350f">LTI assumptions, base flow separation, triangular UH.</p></div>
+              <div style="background-color: #f0fdf4; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #166534; font-size: 0.85rem; margin-bottom: 0.5rem">⚠️ Skip</h4><p style="font-size: 0.75rem; margin: 0; color: #14532d">Advanced IUH derivations.</p></div>
+            </div>
+          </div>
+          <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+            <div style="background-color: #fcf9f4; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center">
+              <div><h3 style="margin: 0; color: var(--primary-accent)">Module 7: Estimation of Flood</h3><span style="font-size: 0.75rem; color: #64748b">Gumbel, Log-Pearson III.</span></div>
+              <span class="badge" style="background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-family: monospace">Weight: 10%</span>
+            </div>
+            <div style="padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem">
+              <div style="background-color: #fef2f2; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #991b1b; font-size: 0.85rem; margin-bottom: 0.5rem">🎓 Master</h4><p style="font-size: 0.75rem; margin: 0; color: #7f1d1d">Gumbel EVD for 100/200/500-yr floods.</p></div>
+              <div style="background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #92400e; font-size: 0.85rem; margin-bottom: 0.5rem">📖 Skim</h4><p style="font-size: 0.75rem; margin: 0; color: #78350f">Rational method, time of concentration.</p></div>
+              <div style="background-color: #f0fdf4; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #166534; font-size: 0.85rem; margin-bottom: 0.5rem">⚠️ Skip</h4><p style="font-size: 0.75rem; margin: 0; color: #14532d">Log-Pearson Type III tables.</p></div>
+            </div>
+          </div>
+          <div style="background-color: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border-color); overflow: hidden">
+            <div style="background-color: #fcf9f4; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center">
+              <div><h3 style="margin: 0; color: var(--primary-accent)">Module 8: Flood Routing</h3><span style="font-size: 0.75rem; color: #64748b">Muskingum, Pul's, St. Venant.</span></div>
+              <span class="badge" style="background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-family: monospace">Weight: 10%</span>
+            </div>
+            <div style="padding: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem">
+              <div style="background-color: #fef2f2; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #991b1b; font-size: 0.85rem; margin-bottom: 0.5rem">🎓 Master</h4><p style="font-size: 0.75rem; margin: 0; color: #7f1d1d">Muskingum routing tables, wedge vs prism storage.</p></div>
+              <div style="background-color: #fffbeb; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #92400e; font-size: 0.85rem; margin-bottom: 0.5rem">📖 Skim</h4><p style="font-size: 0.75rem; margin: 0; color: #78350f">Pul's reservoir routing, peak outflow proof.</p></div>
+              <div style="background-color: #f0fdf4; padding: 1rem; border-radius: 0.5rem"><h4 style="color: #166534; font-size: 0.85rem; margin-bottom: 0.5rem">⚠️ Skip</h4><p style="font-size: 0.75rem; margin: 0; color: #14532d">Saint-Venant derivations.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: TIMETABLE -->
+      <section id="timetable-section" class="dashboard-section">
+        <div style="background-color: var(--card-bg); padding: 1.5rem; border-radius: 0.75rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem">
+          <div>
+            <h2 style="color: var(--primary-accent); margin-bottom: 0.5rem">🗓️ 14-Day Intensive Revision Plan</h2>
+            <p style="font-size: 0.9rem; color: #475569; margin: 0">Targeted daily preparation leading to the exam.</p>
+          </div>
+          <div class="progress-section">
+            <div style="text-align: right">
+              <div class="progress-label">Timetable Progress</div>
+              <div class="progress-number" id="timetable-count">0/14 Days</div>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="timetable-fill-bar" style="width: 0%"></div></div>
+            <span class="progress-number" id="timetable-percent-text" style="font-size: 1.1rem">0%</span>
+          </div>
+        </div>
+        <div id="timetable-list-container" class="grid-3" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))"></div>
+      </section>
+
+      <!-- SECTION 5: PYQ BANK -->
+      <section id="pyq-bank-section" class="dashboard-section">
+        <div style="background-color: var(--card-bg); padding: 1.5rem; border-radius: 0.75rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem">
+            <h2 style="color: var(--primary-accent); margin: 0">📝 Previous Year Questions Bank</h2>
+            <span class="badge" id="match-count" style="background-color: #fffbeb; color: var(--primary-accent); border: 1px solid var(--border-color); font-family: monospace">Showing 0 of 0 PYQs</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; margin-bottom: 1rem">
+            <input type="text" id="search-input" placeholder="Search concept/question..." style="padding: 0.5rem; border-radius: 0.375rem; border: 1px solid var(--border-color); background-color: #fdfbfa; font-size: 0.8rem">
+            <select id="module-select" style="padding: 0.5rem; border-radius: 0.375rem; border: 1px solid var(--border-color); background-color: #fdfbfa; font-size: 0.8rem">
+              <option value="all">All Modules</option><option value="1">Mod 1: Intro</option><option value="2">Mod 2: Precip</option><option value="3">Mod 3: Infiltration</option><option value="4">Mod 4: Evap</option><option value="5">Mod 5: Runoff</option><option value="6">Mod 6: Hydrograph</option><option value="7">Mod 7: Flood</option><option value="8">Mod 8: Routing</option>
+            </select>
+            <select id="year-select" style="padding: 0.5rem; border-radius: 0.375rem; border: 1px solid var(--border-color); background-color: #fdfbfa; font-size: 0.8rem">
+              <option value="all">All Years</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option>
+            </select>
+            <select id="diff-select" style="padding: 0.5rem; border-radius: 0.375rem; border: 1px solid var(--border-color); background-color: #fdfbfa; font-size: 0.8rem">
+              <option value="all">All Difficulties</option><option value="Easy">Easy</option><option value="Medium">Medium</option><option value="Hard">Hard</option>
+            </select>
+            <select id="type-select" style="padding: 0.5rem; border-radius: 0.375rem; border: 1px solid var(--border-color); background-color: #fdfbfa; font-size: 0.8rem">
+              <option value="all">All Types</option><option value="MCQ">MCQ</option><option value="Theory">Theory</option><option value="Numerical">Numerical</option>
+            </select>
+          </div>
+          <div style="background-color: #fcf9f4; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color); display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem">
+            <span style="font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase">Smart Filters:</span>
+            <label style="font-size: 0.75rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.375rem"><input type="checkbox" id="cb-repeated" style="accent-color: var(--primary-accent)"> 🔥 Repeated</label>
+            <label style="font-size: 0.75rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.375rem"><input type="checkbox" id="cb-important" style="accent-color: var(--primary-accent)"> 🎯 High Importance</label>
+            <label style="font-size: 0.75rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.375rem"><input type="checkbox" id="cb-probable" style="accent-color: var(--primary-accent)"> 🔮 Probable 2026</label>
+            <label style="font-size: 0.75rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.375rem"><input type="checkbox" id="cb-conceptual" style="accent-color: var(--primary-accent)"> 💡 Conceptual</label>
+            <label style="font-size: 0.75rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.375rem"><input type="checkbox" id="cb-formula" style="accent-color: var(--primary-accent)"> 🧮 Formula-Heavy</label>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem">
+            <div style="display: flex; align-items: center; gap: 0.5rem">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #64748b">Sort by:</span>
+              <select id="sort-select" style="padding: 0.375rem 0.5rem; border-radius: 0.375rem; border: 1px solid var(--border-color); background-color: #fdfbfa; font-size: 0.8rem">
+                <option value="year-desc">Year (Newest)</option><option value="year-asc">Year (Oldest)</option><option value="marks-desc">Marks (High to Low)</option><option value="marks-asc">Marks (Low to High)</option><option value="diff-desc">Difficulty (Hard to Easy)</option><option value="diff-asc">Difficulty (Easy to Hard)</option>
+              </select>
+            </div>
+            <button id="btn-reset" style="background-color: var(--bg-color); color: var(--text-color); border: 1px solid var(--border-color); padding: 0.375rem 0.75rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 700; cursor: pointer">Reset All Filters</button>
+          </div>
+        </div>
+        <div id="questions-grid" class="grid-3"></div>
+      </section>
+
+      <!-- SECTION 6: SMART SYLLABUS -->
+      <section id="syllabus-section" class="dashboard-section">
+        <div style="background-color: var(--card-bg); padding: 1.5rem; border-radius: 0.75rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem">
+          <div>
+            <h2 style="color: var(--primary-accent); margin-bottom: 0.5rem">🎯 Smart Syllabus Checklist</h2>
+            <p style="font-size: 0.9rem; color: #475569; margin: 0">Synced with your browser storage.</p>
+          </div>
+          <div class="progress-section">
+            <div style="text-align: right">
+              <div class="progress-label">Syllabus Covered</div>
+              <div class="progress-number" id="inner-syllabus-count">0/20 Topics</div>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="inner-syllabus-fill" style="width: 0%"></div></div>
+            <span class="progress-number" id="inner-syllabus-percent" style="font-size: 1.1rem">0%</span>
+          </div>
+        </div>
+        <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))">
+          <div class="card" style="border-top: 4px solid var(--success-color)">
+            <h3 style="color: var(--success-color); font-size: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem">🔴 MUST STUDY</h3>
+            <div id="syllabus-must-study-list"></div>
+          </div>
+          <div class="card" style="border-top: 4px solid #f59e0b">
+            <h3 style="color: #d97706; font-size: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem">🟡 STUDY</h3>
+            <div id="syllabus-study-list"></div>
+          </div>
+          <div class="card" style="border-top: 4px solid #16a34a">
+            <h3 style="color: #16a34a; font-size: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem">🟢 SKIM</h3>
+            <div id="syllabus-skim-list"></div>
+          </div>
+          <div class="card" style="border-top: 4px solid #64748b">
+            <h3 style="color: #64748b; font-size: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem">⚪ SKIP</h3>
+            <div id="syllabus-skip-list"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer style="background-color: var(--card-bg); border-top: 1px solid var(--border-color); padding: 2rem 1rem; text-align: center; font-size: 0.75rem; color: #64748b; margin-top: 3rem">
+      <p style="margin: 0 0 0.5rem 0; font-family: 'JetBrains Mono', monospace">CE-301 Engineering Hydrology &bull; ASTU Exam Preparation Dashboard</p>
+      <p style="margin: 0">&copy; 2026 Exam Prep Portal. Offline Revision App.</p>
+    </footer>
+
+    <!-- SOLUTION MODAL -->
+    <div id="modal-overlay" class="modal-overlay" style="display: none">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="badge-group">
+            <span class="badge badge-year" id="modal-year">2022</span>
+            <span class="badge badge-marks" id="modal-marks">8 Marks</span>
+            <span class="badge badge-module" id="modal-module">Module 2</span>
+            <span class="badge" id="modal-difficulty">Medium</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem">
+            <div style="display: flex; align-items: center; border: 1px solid var(--border-color); background-color: #ffffff; padding: 0.25rem; border-radius: 0.375rem">
+              <button id="btn-zoom-out" style="border: none; background: none; font-size: 1rem; font-weight: 700; padding: 0 0.5rem; cursor: pointer" title="Decrease Font Size">&minus;</button>
+              <span id="zoom-text" style="font-size: 0.75rem; font-weight: 700; color: #64748b; padding: 0 0.25rem; font-family: monospace">100%</span>
+              <button id="btn-zoom-in" style="border: none; background: none; font-size: 1rem; font-weight: 700; padding: 0 0.5rem; cursor: pointer" title="Increase Font Size">+</button>
+              <button id="btn-zoom-reset" style="border: none; background: none; font-size: 0.65rem; font-weight: 700; padding: 0 0.25rem; cursor: pointer" title="Reset Zoom">Reset</button>
+            </div>
+            <button id="modal-close" style="background: none; border: 1px solid var(--border-color); font-size: 1.25rem; font-weight: 700; border-radius: 0.375rem; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; cursor: pointer">&times;</button>
+          </div>
+        </div>
+        <div class="modal-question">
+          <div style="color: #fbbf24; font-weight: 700; font-size: 0.75rem; margin-bottom: 0.25rem" id="modal-qnum">Q2 (a)</div>
+          <div id="modal-question-text">Loading question text...</div>
+        </div>
+        <div class="modal-answer-area" id="modal-answer-area">Loading detailed solution...</div>
+        <div class="modal-footer">
+          <div style="display: flex; gap: 0.5rem">
+            <button id="btn-copy-q" style="background-color: #ffffff; color: var(--text-color); border: 1px solid var(--border-color); font-family: inherit; font-size: 0.75rem; font-weight: 700; padding: 0.5rem 0.75rem; border-radius: 0.375rem; cursor: pointer">Copy Question</button>
+            <button id="btn-copy-a" style="background-color: #ffffff; color: var(--text-color); border: 1px solid var(--border-color); font-family: inherit; font-size: 0.75rem; font-weight: 700; padding: 0.5rem 0.75rem; border-radius: 0.375rem; cursor: pointer">Copy Answer</button>
+          </div>
+          <button id="modal-done" style="background-color: var(--primary-accent); color: #ffffff; border: none; padding: 0.5rem 1.5rem; border-radius: 0.375rem; font-size: 0.8rem; font-weight: 700; cursor: pointer">Done</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
